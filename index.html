@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Closed Beta Test of the DayZ Cheat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .benefits, .registration-form, .testimonials, .contact, .fake-check, .reviews {
+            margin-bottom: 20px;
+        }
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits li {
+            background: url('check.png') no-repeat left center;
+            background-size: 20px 20px;
+            padding-left: 30px;
+            margin-bottom: 10px;
+        }
+        .registration-form input, .registration-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .registration-form button, .fake-check button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .registration-form button:hover, .fake-check button:hover {
+            background-color: #218838;
+        }
+        .testimonials blockquote, .reviews blockquote {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 5px solid #ccc;
+        }
+        .contact {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            document.querySelector('.registration-form').classList.add('hidden');
+            document.querySelector('.fake-check').classList.remove('hidden');
+            setTimeout(() => {
+                document.querySelector('.check-status').textContent = 'Computer check completed. Ready for download.';
+                document.querySelector('.download-btn').classList.remove('hidden');
+            }, 3000); // Simulate a 3-second check
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Join the Closed Beta Test of the DayZ Cheat</h1>
+        <p>Looking for a competitive edge in DayZ? Participate in the closed beta test of our new cheat and be one of the first to gain access to unique features and capabilities. Register now and become part of an exclusive community of testers!</p>
+
+        <div class="benefits">
+            <h2>Main Benefits:</h2>
+            <ul>
+                <li>Silent Movement: Move across the map unnoticed by enemies.</li>
+                <li>Aim Assist: Automatic targeting for accurate shots.</li>
+                <li>Wall Hack: Detect enemies and important objects behind obstacles.</li>
+                <li>Customizable: Adjust the cheat to suit your playstyle.</li>
+            </ul>
+        </div>
+
+        <div class="registration-form">
+            <h2>How to Register:</h2>
+            <form onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="reason">Why do you want to participate in the testing?</label>
+                <textarea id="reason" name="reason" required></textarea>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div class="fake-check hidden">
+            <h2>Computer Check in Progress...</h2>
+            <p class="check-status">Please wait, checking your computer...</p>
+            <button class="download-btn hidden" onclick="window.location.href='download-link.zip'">Download Cheat</button>
+        </div>
+
+        <div class="testimonials">
+            <h2>Participant Testimonials:</h2>
+            <blockquote>
+                "This cheat really changed my game. The features are simply amazing!" - Player1
+            </blockquote>
+            <blockquote>
+                "I've been testing for a week now, and this is the best cheat I've ever used." - Player2
+            </blockquote>
+        </div>
+
+        <div class="reviews">
+            <h2>Cheat Reviews:</h2>
+            <blockquote>
+                "The silent movement feature is a game-changer. I can sneak up on enemies without being detected." - Alex
+            </blockquote>
+            <blockquote>
+                "Aim assist works flawlessly. My accuracy has improved significantly." - Jordan
+            </blockquote>
+            <blockquote>
+                "Wall hack is incredibly useful for spotting enemies and planning my moves." - Casey
+            </blockquote>
+            <blockquote>
+                "The customization options allowed me to tailor the cheat to my specific needs." - Taylor
+            </blockquote>
+        </div>
+
+        <div class="contact">
+            <h2>Contact:</h2>
+            <p>If you have any questions, contact us at: support@example.com</p>
+        </div>
+
+        <div class="call-to-action">
+            <h2>Don't miss your chance to be one of the first testers! Registration is limited!</h2>
+            <button type="button" onclick="document.querySelector('.registration-form form').scrollIntoView({ behavior: 'smooth' });">Register Now</button>
+        </div>
+    </div>
+</body>
+</html>
